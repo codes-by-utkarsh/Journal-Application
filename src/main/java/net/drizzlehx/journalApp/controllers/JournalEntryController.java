@@ -1,4 +1,9 @@
 package net.drizzlehx.journalApp.controllers;
 
-public class JournalEntryController {
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class JournalEntryController
+{
+
 }
