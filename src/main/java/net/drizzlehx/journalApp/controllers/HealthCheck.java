@@ -5,5 +5,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HealthCheck
 {
-    pu
+    public String healthCheck()
+    {
+        return "OK";
+    }
 }
