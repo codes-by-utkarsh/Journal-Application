@@ -19,7 +19,7 @@ public class JournalEntryControllerv2
         return null;
     }
     @PostMapping()
-    public boolean create(@RequestBody journalEntry myEntry)
+    public journalEntry create(@RequestBody journalEntry myEntry)
     {
         return null;
     }
@@ -30,7 +30,13 @@ public class JournalEntryControllerv2
         return null;
     }
     @DeleteMapping("/id/{nyId}")
-    public boolean delete(@PathVariable long myId)
+    public journalEntry delete(@PathVariable long myId)
+    {
+        return null;
+    }
+
+    @PutMapping("/id/{myId}")
+    public journalEntry update(@PathVariable long myId, @RequestBody journalEntry myEntry)
     {
         return null;
     }
