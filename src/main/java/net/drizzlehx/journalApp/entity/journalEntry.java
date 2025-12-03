@@ -1,5 +1,7 @@
 package net.drizzlehx.journalApp.entity;
 
+import org.springframework.stereotype.Component;
+
 public class journalEntry
 {
     private long id;
