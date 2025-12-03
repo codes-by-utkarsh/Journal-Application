@@ -5,12 +5,12 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.List;
+import java.util.Map;
 
 @RestController
-@RequestMapping("/_journal")
-public class JournalEntryController
+@RequestMapping("/journal")
+public class JournalEntryControllerv2
 {
     private Map<Long,journalEntry> journalEntries = new HashMap<>();
     @GetMapping
