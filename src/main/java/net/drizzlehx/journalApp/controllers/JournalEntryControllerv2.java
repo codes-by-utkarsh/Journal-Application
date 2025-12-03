@@ -29,5 +29,10 @@ public class JournalEntryControllerv2
     {
         return null;
     }
+    @DeleteMapping("/id/{nyId}")
+    public boolean delete(@PathVariable long myId)
+    {
+        return null;
+    }
 
 }
