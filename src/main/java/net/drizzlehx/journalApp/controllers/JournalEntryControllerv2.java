@@ -12,22 +12,22 @@ import java.util.Map;
 @RequestMapping("/journal")
 public class JournalEntryControllerv2
 {
-    private Map<Long,journalEntry> journalEntries = new HashMap<>();
     @GetMapping
     public List<journalEntry> getall()
+
     {
-        return new ArrayList<>(journalEntries.values());
+        return null;
     }
     @PostMapping()
     public boolean create(@RequestBody journalEntry myEntry)
     {
-        journalEntries.put(myEntry.getId(),myEntry);
-        return true;
+        return null;
     }
     @GetMapping("/id/{myId}")
     public journalEntry getJournalEntry(@PathVariable long myId)
+
     {
-        return journalEntries.get(myId);
+        return null;
     }
 
 }
