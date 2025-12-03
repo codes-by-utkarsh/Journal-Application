@@ -12,9 +12,9 @@ import java.util.List;
 @RequestMapping("/journal")
 public class JournalEntryController
 {
-    private Map<Long,JournalEntry> journalEntries = new HashMap<>();
+    private Map<Long,journalEntry> journalEntries = new HashMap<>();
     @GetMapping
-    public List<JournalEntry> getall()
+    public List<journalEntry> getall()
     {
         return new ArrayList<>(journalEntries.values());
     }
