@@ -9,6 +9,7 @@ public class JournalAppApplication {
 	public static void main(String[] args)
     {
 		SpringApplication.run(JournalAppApplication.class, args);
+        hgffgvg
 	}
 
 
