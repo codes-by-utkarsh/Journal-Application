@@ -23,7 +23,7 @@ public class JournalEntryControllerv2
     private JournalEntryService journalEntryService;
 
     @GetMapping
-    public List<journalEntry> getall()
+    public List<journalEntry> getAll()
     {
         return journalEntryService.getAll();
     }
