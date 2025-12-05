@@ -26,6 +26,7 @@ public class JournalEntryControllerv2
     @PostMapping()
     public journalEntry create(@RequestBody journalEntry myEntry)
     {
+        journalEntryService.save(myEntry);
         return null;
     }
     @GetMapping("/id/{myId}")
