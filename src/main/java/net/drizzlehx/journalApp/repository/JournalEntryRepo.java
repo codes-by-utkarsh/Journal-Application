@@ -1,12 +1,12 @@
 package net.drizzlehx.journalApp.repository;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Component;
-
 import net.drizzlehx.journalApp.entity.journalEntry;
 
 @Component
-public interface JournalEntryRepo extends MongoRepository<journalEntry,String>
+public interface JournalEntryRepo extends MongoRepository<journalEntry, ObjectId>
 {
 
 }
