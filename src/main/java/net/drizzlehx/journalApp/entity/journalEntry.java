@@ -1,9 +1,13 @@
 package net.drizzlehx.journalApp.entity;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.stereotype.Component;
 
+@Document("users")
 public class journalEntry
 {
+    @Id
     private String id;
     private String title;
 
