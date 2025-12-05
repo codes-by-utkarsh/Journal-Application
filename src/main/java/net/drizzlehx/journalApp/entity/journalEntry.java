@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 public class journalEntry
 {
-    private long id;
+    private String id;
     private String title;
 
     public String getContent() {
