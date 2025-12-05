@@ -4,12 +4,24 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.stereotype.Component;
 
-@Document("users")
+import java.util.Date;
+
+@Document(collection = "journal_entries")
 public class journalEntry
 {
     @Id
     private String id;
     private String title;
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    private Date date;
 
     public String getContent() {
         return content;
