@@ -27,33 +27,25 @@ public class JournalEntryControllerv2
     {
         return journalEntryService.getAll();
     }
+
     @PostMapping()
-    public journalEntry create(@RequestBody journalEntry myEntry)
-    {
+    public journalEntry create(@RequestBody journalEntry myEntry) {
         journalEntryService.save(myEntry);
         return null;
     }
-    // @GetMapping("/error")
-    // @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    // public String errorExample()
-    // {
-    //     return "Sample error endpoint";
-    // }
-    @GetMapping("/id/{myId}")
-    public journalEntry getJournalEntry(@PathVariable long myId)
 
-    {
+    @GetMapping("/id/{myId}")
+    public journalEntry getJournalEntry(@PathVariable long myId) {
         return null;
     }
+
     @DeleteMapping("/id/{nyId}")
-    public journalEntry delete(@PathVariable long myId)
-    {
+    public journalEntry delete(@PathVariable long myId) {
         return null;
     }
 
     @PutMapping("/id/{myId}")
-    public journalEntry update(@PathVariable long myId, @RequestBody journalEntry myEntry)
-    {
+    public journalEntry update(@PathVariable long myId, @RequestBody journalEntry myEntry) {
         return null;
     }
 }
