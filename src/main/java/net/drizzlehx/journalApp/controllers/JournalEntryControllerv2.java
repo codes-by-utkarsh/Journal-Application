@@ -1,7 +1,9 @@
 package net.drizzlehx.journalApp.controllers;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,23 +31,24 @@ public class JournalEntryControllerv2
     }
 
     @PostMapping()
-    public journalEntry create(@RequestBody journalEntry myEntry) {
+    public boolean create(@RequestBody journalEntry myEntry) {
+        myEntry.setDate(LocalDateTime.now());
         journalEntryService.save(myEntry);
-        return null;
+        return true;
     }
 
     @GetMapping("/id/{myId}")
-    public journalEntry getJournalEntry(@PathVariable long myId) {
+    public journalEntry getJournalEntry(@PathVariable ObjectId myId) {
         return null;
     }
 
     @DeleteMapping("/id/{nyId}")
-    public journalEntry delete(@PathVariable long myId) {
+    public journalEntry delete(@PathVariable ObjectId myId) {
         return null;
     }
 
     @PutMapping("/id/{myId}")
-    public journalEntry update(@PathVariable long myId, @RequestBody journalEntry myEntry) {
+    public journalEntry update(@PathVariable ObjectId myId, @RequestBody journalEntry myEntry) {
         return null;
     }
 }
