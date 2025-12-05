@@ -1,6 +1,8 @@
 package net.drizzlehx.journalApp.controllers;
 
 import net.drizzlehx.journalApp.entity.journalEntry;
+import net.drizzlehx.journalApp.service.JournalEntryService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -12,6 +14,9 @@ import java.util.Map;
 @RequestMapping("/journal")
 public class JournalEntryControllerv2
 {
+    @Autowired
+    private JournalEntryService journalEntryService;
+
     @GetMapping
     public List<journalEntry> getall()
 
