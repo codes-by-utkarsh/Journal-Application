@@ -24,9 +24,8 @@ public class JournalEntryControllerv2
 
     @GetMapping
     public List<journalEntry> getall()
-
     {
-        return null;
+        return journalEntryService.getAll();
     }
     @PostMapping()
     public journalEntry create(@RequestBody journalEntry myEntry)
