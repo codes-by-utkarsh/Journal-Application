@@ -29,5 +29,6 @@ public class JournalEntryService
     public Optional<journalEntry> getbyId(@PathVariable ObjectId myId)
     {
         return Optional.of(journalEntryRepo.findById(myId).get());
+        return Optional.of(journalEntryRepo.findById(myId).get());
     }
 }
