@@ -17,11 +17,11 @@ public class journalEntry
     @Id
     private ObjectId id;
     private String title;
-    private Date date;
+    private LocalDateTime date;
     private String content;
 
-    public LocalDateTime setDate(LocalDateTime now)
-    {
-        return LocalDateTime.now();
-    }
+//    public LocalDateTime setDate(LocalDateTime now)
+//    {
+//        return LocalDateTime.now();
+//    }
 }
