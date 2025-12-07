@@ -15,7 +15,7 @@ import java.util.Optional;
 public class JournalEntryService
 {
     @Autowired
-    private JournalEntryRepo journalEntryRepo;
+    private static JournalEntryRepo journalEntryRepo;
 
     public void save(journalEntry je)
     {
@@ -31,7 +31,7 @@ public class JournalEntryService
         return Optional.of(journalEntryRepo.findById(myId).get());
 
     }
-    public void deletebyId(ObjectId myId)
+    public static void deletebyId(@PathVariable ObjectId myId)
     {
         journalEntryRepo.deleteById(myId);
     }
