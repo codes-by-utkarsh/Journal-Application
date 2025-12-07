@@ -31,4 +31,8 @@ public class JournalEntryService
         return Optional.of(journalEntryRepo.findById(myId).get());
 
     }
+    public void deletebyId(ObjectId myId)
+    {
+        journalEntryRepo.deleteById(myId);
+    }
 }
