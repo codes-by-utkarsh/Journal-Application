@@ -34,18 +34,24 @@ public class JournalEntryControllerv2
     }
 
     @PostMapping()
-    public boolean create(@RequestBody journalEntry myEntry) {
-        myEntry.setDate(LocalDateTime.now());
-        journalEntryService.save(myEntry);
-        return true;
+    public ResponseEntity<journalEntry> create(@RequestBody journalEntry myEntry)
+    {
+        try {
+            myEntry.setDate(LocalDateTime.now());
+            journalEntryService.save(myEntry);
+            return new ResponseEntity<>(myEntry, HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(myEntry, HttpStatus.BAD_REQUEST);
+        }
     }
 
     @GetMapping("/id/{myId}")
-    public journalEntry getJournalEntry(@PathVariable ObjectId myId) {
+    public ResponseEntity<journalEntry> getJournalEntry(@PathVariable ObjectId myId) {
         Optional<journalEntry> journalEntry = journalEntryService.getbyId(myId);
         if(journalEntry.isPresent()) {
             return new ResponseEntity<>(journalEntry.get(), HttpStatus.OK);
         }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     @DeleteMapping("/id/{myId}")
