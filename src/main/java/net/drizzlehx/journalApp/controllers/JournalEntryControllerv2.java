@@ -41,7 +41,7 @@ public class JournalEntryControllerv2
             journalEntryService.save(myEntry);
             return new ResponseEntity<>(myEntry, HttpStatus.CREATED);
         } catch (Exception e) {
-            return new ResponseEntity<>(myEntry, HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(myEntry, HttpStatus.BAD_REQUEST);sdfdsf
         }
     }
 
